@@ -47,7 +47,7 @@ img { display: block; max-width: 100%; }
 .section-kicker > span:first-child { font: 14px var(--serif); letter-spacing: 0; }
 .kicker-line { width: 36px; height: 1px; background: #d5a576; }
 .section-kicker-light { color: #f4a253; }
-.invitation-card:focus-visible, .calendar-button:focus-visible, .contact-numbers a:focus-visible, .brand-logo:focus-visible, .back-top:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+.invitation-card:focus-visible, .calendar-button:focus-visible, .contact-numbers a:focus-visible, .brand-logo:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
 .invitation-card { position: relative; max-width: 730px; margin: 24px auto 0; padding: 62px 20px 60px; border: 1px solid #d9bd95; background: rgba(255,253,248,.72); text-align: center; box-shadow: 0 18px 55px rgba(87,55,26,.06); }
 .invitation-card::before, .invitation-card::after { content: ""; position: absolute; width: 30px; height: 30px; border-color: var(--orange); border-style: solid; }
 .invitation-card::before { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
@@ -80,7 +80,7 @@ img { display: block; max-width: 100%; }
 .detail-label { margin: 0 0 5px; color: #d1c3ad; font-size: 9px; letter-spacing: .13em; }
 .detail-value { margin: 0; font: 500 clamp(16px,4.8vw,20px)/1.3 var(--serif); overflow-wrap: anywhere; }
 .detail-value span { display: inline-block; margin-top: 4px; color: #efa65c; font-size: 15px; }
-.calendar-button { width: 100%; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; margin-top: 20px; padding: 12px 20px; border: 0; border-radius: 999px; background: var(--orange); color: var(--ink); font: 700 12px var(--sans); letter-spacing: .04em; cursor: pointer; box-shadow: 0 8px 20px rgba(244,122,11,.18); transition: transform .22s ease, background-color .22s ease; }
+.calendar-button { width: 100%; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; margin-top: 20px; padding: 12px 20px; border: 0; border-radius: 999px; background: var(--orange); color: var(--ink); font: 700 12px var(--sans); letter-spacing: .04em; text-decoration: none; cursor: pointer; box-shadow: 0 8px 20px rgba(244,122,11,.18); transition: transform .22s ease, background-color .22s ease; }
 .calendar-button:hover { transform: translateY(-2px); background: var(--orange-bright); }
 .calendar-button svg { width: 18px; height: 18px; }
 
@@ -123,13 +123,13 @@ img { display: block; max-width: 100%; }
 .contact-numbers a b { position: absolute; top: 50%; right: 14px; color: var(--orange); transform: translateY(-50%); }
 .contact-numbers a b svg { width: 16px; height: 16px; }
 
-.footer { min-height: 76px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 7px 10px; align-items: center; padding: 14px 18px; background: #2b2825; }
+.footer { min-height: 92px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 7px 10px; align-items: center; padding: 18px; border-top: 1px solid rgba(255,209,141,.28); background: linear-gradient(115deg,#082902,#12310d); }
 .brand-logo { width: 166px; height: 54px; display: inline-flex; align-items: center; overflow: hidden; }
 .brand-logo img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
-.btm { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
+.btm { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: flex-start; gap: 7px; }
 .btm > span { color: #e3d8c9; font-size: 8px; letter-spacing: .1em; line-height: 1.5; }
-.back-top { grid-column: 2; grid-row: 1; min-width: 44px; min-height: 44px; display: grid; place-items: center; color: #ffae61; text-decoration: none; }
-.back-top svg { width: 20px; height: 20px; }
+.btm > a { display: inline-flex; min-height: 32px; align-items: center; padding: 0 13px; border: 1px solid rgba(255,209,141,.48); border-radius: 999px; color: #ffd18d; font-size: 9px; font-weight: 700; letter-spacing: .07em; text-decoration: none; transition: background .2s ease,border-color .2s ease; }
+.btm > a:hover { border-color: #ffd18d; background: rgba(255,209,141,.1); }
 
 .will-reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease,transform .7s cubic-bezier(.2,.75,.25,1); }
 .will-reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -178,11 +178,10 @@ img { display: block; max-width: 100%; }
   .contact-numbers { grid-template-columns: 1fr 1fr; gap: 12px; }
   .contact-numbers a { min-height: 100px; gap: 11px; padding: 19px; }
   .contact-numbers a strong { font-size: clamp(16px,2vw,21px); }
-  .footer { grid-template-columns: minmax(0,1fr) auto auto; gap: 24px; padding: 16px clamp(32px,7vw,112px); }
+  .footer { grid-template-columns: minmax(0,1fr) auto; gap: 24px; padding: 18px clamp(32px,7vw,112px); }
   .footer .brand-logo { width: 220px; height: 64px; }
   .btm { grid-column: auto; align-items: flex-end; }
   .btm > span { font-size: 8px; letter-spacing: .14em; text-align: right; }
-  .back-top { grid-column: auto; grid-row: auto; }
   .top-date { padding-inline: 16px; }
   .top-date-copy { font-size: 11px; }
 }

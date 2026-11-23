@@ -27,33 +27,5 @@
     });
   }
 
-  const calendarLink = document.querySelector('[data-calendar]');
-  calendarLink?.addEventListener('click', (event) => {
-    event.preventDefault();
-    const eventText = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'PRODID:-//InviteHarbour//Umemulo ka Asemahle//ZU',
-      'CALSCALE:GREGORIAN',
-      'BEGIN:VEVENT',
-      'UID:umemulo-asemahle-20270320@inviteharbour.co.za',
-      'DTSTAMP:' + new Date().toISOString().replaceAll('-', '').replaceAll(':', '').replace(/\.\d{3}/, ''),
-      'DTSTART:20270320T090000Z',
-      'DURATION:PT1H',
-      'SUMMARY:Umemulo ka Asemahle',
-      'DESCRIPTION:Hosted by the Sithole family. Dress code: Traditional attire (White Izintombi). End time and venue to be confirmed.',
-      'END:VEVENT',
-      'END:VCALENDAR'
-    ].join('\r\n');
-    const file = new Blob([eventText], { type: 'text/calendar;charset=utf-8' });
-    const downloadUrl = URL.createObjectURL(file);
-    const downloadLink = document.createElement('a');
-    downloadLink.href = downloadUrl;
-    downloadLink.download = 'umemulo-ka-asemahle.ics';
-    document.body.append(downloadLink);
-    downloadLink.click();
-    downloadLink.remove();
-    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
-  });
 })();
 
