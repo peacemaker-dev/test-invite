@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="js/main.js" defer></script>
@@ -18,10 +18,13 @@
 
 <body>
   <header class="topbar">
-    <a class="brand brand-logo" href="https://www.inviteharbour.co.za" target="_blank" rel="noopener noreferrer"
-      aria-label="Vakashela i-InviteHarbour"><img src="assets/inviteharbour/inviteharbour.png"
-        alt="InviteHarbour — One Link. Every Detail."></a>
-    <a class="top-link" href="#details"><span lang="en">Details</span> <span aria-hidden="true">↘</span></a>
+    <a class="top-date" href="#details" aria-label="Go to event details: Saturday, 20 March 2027">
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <rect x="3.5" y="5" width="17" height="16" rx="2.5"></rect>
+        <path d="M7.5 3v4M16.5 3v4M4 9.5h16"></path>
+      </svg>
+      <span class="top-date-copy" lang="en">SAT · 20 MAR 2027</span>
+    </a>
   </header>
 
   <main id="home">
@@ -30,41 +33,33 @@
       </div>
       <div class="hero-wash"></div>
       <div class="hero-copy">
-        <div class="eyebrow"><span class="sun-mark" aria-hidden="true">✳</span> ISIMEMO SOMNDENI</div>
         <p class="hero-intro">Ngenjabulo nangokubonga</p>
-        <h1 id="hero-title">Umemulo<br>ka <em>Asemahle</em></h1>
-        <div class="hero-rule"><span></span><span class="rule-diamond">◆</span><span></span></div>
+        <h1 id="hero-title"><span class="hero-event">Umemulo ka</span><span class="hero-name">Asemahle</span></h1>
+        <div class="hero-rule" aria-hidden="true"><span></span><span class="rule-diamond"></span><span></span></div>
         <p class="hero-note">Usuku olukhethekile. Isiko elihle. Abantu esibathandayo.</p>
 
       </div>
     </section>
 
     <section class="invitation section-wrap" id="isimemo">
-      <div class="section-kicker"><span>01</span><span class="kicker-line"></span><span>ISIMEMO</span></div>
-      <details class="envelope" id="invite-envelope">
-        <summary class="envelope-trigger"><span class="envelope-icon" aria-hidden="true">✉</span><span
-            class="envelope-label"><strong>Vula isimemo</strong><small lang="en">Click to open the invitation</small></span><span
-            class="envelope-arrow" aria-hidden="true">↗</span></summary>
-        <div class="envelope-letter">
-          <div class="invitation-card">
-            <div class="card-ornament ornament-top" aria-hidden="true">✳　◇　✳</div>
-            <p class="script-line">Ngokuzithoba nangenhlonipho</p>
-            <h2>Umdeni wakwa<br><span>Sithole</span></h2>
-            <div class="bead-divider" aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
-            <p class="invite-copy">Uyanimema ukuba nihlanganyele nawo ekugubheni umemulo wendodakazi yawo, u</p>
-            <p class="honouree">Asemahle</p>
-            <p class="invite-footer">Ukuba khona kwenu kuzokwenza lolu suku lube luhle nakakhulu.</p>
-            <div class="card-ornament ornament-bottom" aria-hidden="true">✳　◇　✳</div>
-          </div>
+      <div class="section-kicker"><span class="kicker-line"></span><span>ISIMEMO</span></div>
+      <div class="invitation-card">
+        <span class="card-ornament ornament-top" aria-hidden="true"></span>
+        <p class="script-line">Ngokuzithoba nangenhlonipho</p>
+        <h2>Umdeni wakwa<br><span>Sithole</span></h2>
+        <div class="bead-divider" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
         </div>
-      </details>
+        <p class="invite-copy">Uyanimema ukuba nihlanganyele nawo ekugubheni umemulo wendodakazi yawo, u</p>
+        <p class="honouree">Asemahle</p>
+        <p class="invite-footer">Ukuba khona kwenu kuzokwenza lolu suku lube luhle nakakhulu.</p>
+        <span class="card-ornament ornament-bottom" aria-hidden="true"></span>
+      </div>
     </section>
 
     <section class="details-section" id="details">
       <div class="section-wrap">
-        <div class="section-kicker section-kicker-light"><span>02</span><span class="kicker-line"></span><span>USUKU
+        <div class="section-kicker section-kicker-light"><span class="kicker-line"></span><span>USUKU
             LOMCIMBI</span></div>
         <div class="details-heading">
           <div>
@@ -74,26 +69,46 @@
           <p class="details-intro" lang="en">Join us on Saturday, 20 March 2027, at 11:00 AM.</p>
         </div>
         <div class="detail-grid">
-          <article class="detail-card"><span class="detail-icon" aria-hidden="true">◷</span>
-            <p class="detail-label" lang="en">DATE &amp; TIME</p>
+          <article class="detail-card"><span class="detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <rect x="3.5" y="5" width="17" height="16" rx="2.5"></rect>
+                <path d="M7.5 3v4M16.5 3v4M4 9.5h16M12 13v4l2.5 1.5"></path>
+              </svg></span>
+            <p class="detail-label" lang="en">Date &amp; time</p>
             <p class="detail-value" lang="en">Saturday, 20 March 2027<br><span>11:00 AM</span></p>
           </article>
-          <article class="detail-card"><span class="detail-icon" aria-hidden="true">⌖</span>
-            <p class="detail-label" lang="en">LOCATION</p>
-            <p class="detail-value" lang="en">To be announced<br><span>More details coming soon</span></p>
+          <article class="detail-card location-card" data-location-card><span class="detail-icon"
+              aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"></path>
+                <circle cx="12" cy="10" r="2.3"></circle>
+              </svg></span>
+            <p class="detail-label" lang="en">Location</p>
+            <p class="detail-value" lang="en" data-location-name>Venue to be announced<br><span>Google Maps link coming
+                soon</span></p>
+            <button class="map-link" type="button" data-map-link disabled><svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"></path>
+                <circle cx="12" cy="10" r="2.3"></circle>
+              </svg><span lang="en">Open in Google Maps</span><svg class="map-link-arrow" aria-hidden="true"
+                viewBox="0 0 24 24">
+                <path d="M7 17 17 7M8 7h9v9"></path>
+              </svg></button>
           </article>
-          <article class="detail-card"><span class="detail-icon" aria-hidden="true">◇</span>
-            <p class="detail-label" lang="en">DRESS CODE</p>
+          <article class="detail-card"><span class="detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="m7 3 5 3 5-3 3 5-3 3v10H7V11L4 8l3-5Z"></path>
+                <path d="M7 11h10"></path>
+              </svg></span>
+            <p class="detail-label" lang="en">Dress code</p>
             <p class="detail-value" lang="en">Traditional attire<br><span>White Izintombi</span></p>
           </article>
         </div>
-        <button class="calendar-button" type="button" data-calendar>Add to calendar <span
-            aria-hidden="true">＋</span></button>
+        <button class="calendar-button" type="button" data-calendar><svg aria-hidden="true" viewBox="0 0 24 24">
+            <rect x="3.5" y="5" width="17" height="16" rx="2.5"></rect>
+            <path d="M7.5 3v4M16.5 3v4M4 9.5h16M12 12v6M9 15h6"></path>
+          </svg><span lang="en">Add to calendar</span></button>
       </div>
     </section>
 
     <section class="gallery section-wrap" aria-labelledby="gallery-title">
-      <div class="section-kicker"><span>03</span><span class="kicker-line"></span><span>IZITHOMBE</span></div>
+      <div class="section-kicker"><span class="kicker-line"></span><span>IZITHOMBE</span></div>
       <div class="gallery-heading">
         <h2 id="gallery-title">U-Asemahle</h2>
         <p>Ubuhle besiko nezikhathi ezimnandi.</p>
@@ -121,9 +136,11 @@
     <section class="closing section-wrap">
       <div class="closing-art" role="img" aria-label="Isithombe sika Asemahle egqoke imvunulo yesintu"></div>
       <div class="closing-copy">
-        <p class="section-kicker"><span>04</span><span class="kicker-line"></span><span>SIYAKULINDELA</span></p>
+        <p class="section-kicker"><span class="kicker-line"></span><span>SIYAKULINDELA</span></p>
         <p class="script-line">The Sithole family welcomes you.</p>
         <h2>Let us celebrate<br><em>together.</em></h2>
+        <p class="closing-about">I’m looking forward to celebrating this special milestone with the people I love. It
+          would mean so much to have you there to share this meaningful day with me.</p>
         <p>Uthando lomndeni, isiko eliphilayo, nenkumbulo eyohlala njalo.</p>
       </div>
     </section>
@@ -131,27 +148,33 @@
     <section class="contact-section" id="ukuxhumana">
       <div class="contact-inner">
         <div>
-          <p class="contact-kicker" lang="en">FOR MORE INFORMATION</p>
+          <p class="contact-kicker" lang="en">For more information</p>
           <h2 lang="en">Get in touch.</h2>
           <p lang="en">Call either number for more information.</p>
         </div>
-        <div class="contact-numbers"><a href="tel:+27712345678"><span>CALL</span><strong>071 234 5678</strong><b
-              aria-hidden="true">↗</b></a><a href="tel:+27612345678"><span>CALL</span><strong>061 234 5678</strong><b
-              aria-hidden="true">↗</b></a></div>
+        <div class="contact-numbers"><a href="tel:+27712345678"><span lang="en">Call</span><strong>071 234
+              5678</strong><b aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M7 17 17 7M8 7h9v9"></path>
+              </svg></b></a><a href="tel:+27612345678"><span lang="en">Call</span><strong>061 234 5678</strong><b
+              aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M7 17 17 7M8 7h9v9"></path>
+              </svg></b></a></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <a class="brand brand-logo" href="https://www.inviteharbour.co.za" target="_blank" rel="noopener noreferrer" aria-label="Vakashela i-InviteHarbour">
+    <a class="brand brand-logo" href="https://www.inviteharbour.co.za" target="_blank" rel="noopener noreferrer"
+      aria-label="Vakashela i-InviteHarbour">
       <img src="assets/inviteharbour/inviteharbour.png" alt="InviteHarbour — One Link. Every Detail.">
     </a>
     <div class="btm">
       <span>One Link. Every Detail.</span>
       <span>www.inviteharbour.co.za</span>
     </div>
-    <a href="#home"
-      class="back-top" aria-label="Buyela phezulu">↑</a>
+    <a href="#home" class="back-top" aria-label="Buyela phezulu"><svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="m6 14 6-6 6 6M12 8v12"></path>
+      </svg></a>
   </footer>
 </body>
 

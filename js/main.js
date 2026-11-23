@@ -1,27 +1,6 @@
 (() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const envelope = document.querySelector('#invite-envelope');
-  const envelopeSummary = envelope?.querySelector('summary');
-  const envelopeLetter = envelope?.querySelector('.envelope-letter');
-
-  envelope?.addEventListener('toggle', () => {
-    if (!envelope.open) {
-      envelopeSummary?.setAttribute('aria-label', 'Vula isimemo');
-      return;
-    }
-    envelopeSummary?.setAttribute('aria-label', 'Vala isimemo');
-    if (!prefersReducedMotion && envelopeLetter?.animate) {
-      envelopeLetter.animate(
-        [
-          { opacity: 0, transform: 'translateY(28px) scale(.98)', filter: 'blur(4px)' },
-          { opacity: 1, transform: 'translateY(0) scale(1)', filter: 'blur(0)' }
-        ],
-        { duration: 720, easing: 'cubic-bezier(.2,.75,.25,1)', fill: 'both' }
-      );
-    }
-  });
-
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
       const target = document.querySelector(link.getAttribute('href'));
@@ -32,7 +11,7 @@
   });
 
   const revealTargets = document.querySelectorAll(
-    '.section-kicker, .detail-card, .photo-tile, .closing-art, .closing-copy, .contact-inner > *'
+    '.section-kicker, .invitation-card, .detail-card, .photo-tile, .closing-art, .closing-copy, .contact-inner > *'
   );
   if (!prefersReducedMotion && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, currentObserver) => {
