@@ -224,3 +224,36 @@ img { display: block; max-width: 100%; }
   .location-card .map-link{grid-column:2;margin-top:7px}
   .map-link{min-height:36px;padding:7px 10px;font-size:7px}
 }
+/* Restored glass invitation header */
+.topbar{position:absolute;z-index:10;top:16px;left:50%;width:min(1120px,calc(100% - 48px));min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 18px;transform:translateX(-50%);border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(8,41,2,.48);color:var(--white);box-shadow:0 12px 34px rgba(14,25,19,.2);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%)}
+.topbar-event{min-width:0;display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none}
+.topbar-monogram{width:42px;height:42px;display:grid;place-items:center;flex:none;border:1px solid rgba(255,255,255,.65);border-radius:50%;color:#f6d59a;font:italic 23px var(--serif)}
+.topbar-event-name{display:flex;align-items:center;gap:5px;font:700 9px var(--sans);letter-spacing:.13em;white-space:nowrap}
+.event-word{color:#fff}
+.event-honouree{color:#ffd18d}
+.top-date{min-height:50px;display:inline-flex;align-items:center;gap:8px;flex:none;padding:7px 13px;border:1px solid rgba(255,255,255,.78);border-radius:999px;background:rgba(255,253,248,.98);color:var(--ink);text-decoration:none;box-shadow:0 5px 16px rgba(0,0,0,.12);transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.top-date:hover{transform:translateY(-2px);background:#fff;box-shadow:0 9px 22px rgba(0,0,0,.18)}
+.top-date:focus-visible,.topbar-event:focus-visible{outline:3px solid var(--orange-bright);outline-offset:3px}
+.top-date>svg:first-child{width:17px;height:17px;color:var(--rust)}
+.top-date-copy{display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+.top-date-copy small{color:#8b705e;font:700 6px var(--sans);letter-spacing:.16em}
+.top-date-copy strong{color:var(--ink);font:700 9px var(--sans);letter-spacing:.045em}
+.top-date .top-date-arrow{width:13px;height:13px;color:var(--orange)}
+@media(max-width:520px){
+  .topbar{top:10px;width:calc(100% - 20px);min-height:60px;padding:6px 7px 6px 10px;gap:7px}
+  .topbar-event{gap:7px}
+  .topbar-monogram{width:36px;height:36px;font-size:20px}
+  .topbar-event-name{gap:3px;font-size:7px;letter-spacing:.075em}
+  .top-date{min-height:46px;gap:6px;padding:6px 9px}
+  .top-date>svg:first-child{width:15px;height:15px}
+  .top-date-copy small{font-size:5px;letter-spacing:.13em}
+  .top-date-copy strong{font-size:8px;letter-spacing:.025em}
+  .top-date .top-date-arrow{width:11px;height:11px}
+  .hero-copy{padding-top:112px}
+}
+@media(max-width:370px){
+  .topbar{width:calc(100% - 16px);padding-left:8px}
+  .topbar-event-name{display:none}
+  .topbar-monogram{width:33px;height:33px;font-size:19px}
+  .top-date-copy strong{font-size:7.5px}
+}
